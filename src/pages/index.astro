@@ -5,32 +5,40 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Portafolio AJLG">
     <main>
-        <section id="inicio-section" class="w-full lg:w-[740px] mx-auto py-44">
-
-            <img 
-                class="rounded-full w-12 h-12 mb-4" 
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJXIP9UvsEW4Rj6lkQL2IbZrCS86dKDk8ag&s" 
-                alt="foto-andres" 
-            />
-
-            <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-                Hey, soy Andrés <a href="https://www.linkedin.com/in/andrés-jesús-lópez-garcía-595a22208/" 
-                    target="_blank" rel="noopener"
-                    class="flex justify-center items-center border-b-2 border-transparent hover:border-white">
-                    <Badge> Disponible para trabajar</Badge>
-                </a>
-            </h1>
-
-            <h2 class="text-2xl opacity-80">
-                Soy un diseñador de aplicaciones web recién titulado. De Huelva, España.
-            </h2>
-
-            <h2 class="text-2xl opacity-80">
-                Me caracterizo por ser una persona <span class="text-green-200">extrovertida</span>
-                y siempre creo un buen <span class="text-green-200">ambiente de trabajo.</span>
-            </h2>
-
-            <ul></ul>
+        <section class="flex px-10 py-40 flex-col">
+            <div class="inline-block">
+                <div class="inline-block items-center rounded-full text-4xl border-2 border-white p-5 mb-4">
+                    <h1 class="px-4">Hey, soy Andrés J. López García</h1>
+                </div>
+            </div>
+            <div class="inline-block">
+                <div class="inline-block items-center rounded-full text-2xl border-2 border-white p-5 mb-4">
+                    <h2 class="text-2xl pb-4 opacity-90">
+                        Soy un diseñador de aplicaciones web recién titulado. De Huelva, España.
+                    </h2>
+                    <h2 class="text-2xl opacity-80">
+                        Me caracterizo por ser una persona <span class="text-blue-200">extrovertida</span>
+                        que crea siempre un buen <span class="text-blue-200">ambiente de trabajo.</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="inline-block">
+                <div class="inline-block items-center rounded-full text-2xl border-2 border-white p-5 opacity-80">
+                    <ul class="list-disc list-inside">
+                        <li><strong>eviden, 28 de noviembre de 2023 - 7 de junio de 2024</strong></li>
+                        <li>Estuve de prácticas de eviden haciendo un bootcamp y participando en un proyecto interno en el cual adquirí las siguientes capacidades:</li>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Spring</li>
+                            <li>Angular</li>
+                            <li>JavaScript</li>
+                            <li>Docker</li>
+                            <li>Postman</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            
         </section>
+        
     </main>
 </Layout>
