@@ -1,6 +1,6 @@
 ---
-import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
 ---
 
 <Layout title="Portafolio AJLG">
@@ -8,7 +8,9 @@ import Layout from '../layouts/Layout.astro';
         <section class="flex px-10 py-40 flex-col">
             <div class="flex items-center space-x-4 mb-4">
                 <img class="rounded-full w-24 h-24 bg-gradient-to-r from-purple-800 to-blue-950 border-2" src="../../public/fotoAndres.webp" alt="foto andres">
-                <Badge>Disponible para trabajar</Badge>
+                <a href="https://www.linkedin.com/in/andrés-jesús-lópez-garcía-595a22208/" target="_blank">
+                    <Badge bgColor="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300 text-sm px-3 py-0.5">Disponible para trabajar</Badge>
+                </a>
             </div>
             
             
@@ -22,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
                     <h2 class="text-2xl pb-4 opacity-90">
                         Soy un diseñador de aplicaciones web recién titulado. De Huelva, España.
                     </h2>
-                    <h2 class="text-2xl opacity-80">
+                    <h2 class="text-2xl opacity-90">
                         Me caracterizo por ser una persona <span class="text-blue-200">extrovertida</span>
                         que crea siempre un buen <span class="text-blue-200">ambiente de trabajo.</span>
                     </h2>
@@ -32,28 +34,92 @@ import Layout from '../layouts/Layout.astro';
         <section id="experiencia" class="flex px-10 py-5 flex-col">
             <div class="inline-block ">
                 <div class="flex items-center space-x-4 mb-4">
-                    <img src="../../public/iconoMaletin.png" class="">
-                    <h1 class="text-4xl px-5">Experiencia</h1>
+                    <img src="../../public/iconoMaletin.png" class="w-20 h-20">
+                    <h1 class="text-5xl px-5">Experiencia</h1>
                 </div>
-                <div class="relative">
-                    <p class="absolute top-3 -left-2 p-7 bg-gradient-to-r from-purple-800 to-blue-950 rounded-full border-2 border-white-950">
-                        <img src="../../public/iconoMarcaPaginas.png" class="absolute left-2 top-2">
+                <div class="relative ml-5">
+                    <p class="absolute top-3 p-5 bg-gradient-to-r from-purple-800 to-blue-950 rounded-full border-2 border-white-950">
+                        <img src="../../public/iconoMarcaPaginas.png" class="absolute left-2 top-2 w-6 h-6">
                     </p>
                     
                     <ol class="list-none border-l px-10 ml-5 pt-2">
                         <li class="mt-5 text-2xl mb-6"><strong>Eviden, 28 de noviembre de 2023 - 7 de junio de 2024</strong></li>
-                        <li class="ml-4 mb-3 opacity-95">Estuve de prácticas de eviden haciendo un bootcamp y participando en un proyecto interno en el cual adquirí las siguientes capacidades:</li>
-                        <ol class="list-none ml-8">
-                            <li>Spring</li>
-                            <li>Angular</li>
-                            <li>JavaScript</li>
-                            <li>Docker</li>
-                            <li>Postman</li>
+                        <li class="ml-4 mb-1 opacity-95">Estuve de prácticas haciendo un bootcamp de Angular e Hibernate.</li>
+                        <li class="ml-4 mb-3 opacity-95">He participado en un proyecto interno en el cual adquirí las siguientes capacidades:</li>
+                        <ol id="badges" class="list-none ml-8 flex flex-row space-x-4">
+                            <li>
+                                <Badge bgColor="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300 text-sm px-3 py-0.5">Spring</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 text-sm px-3 py-0.5">Angular</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 text-sm px-3 py-0.5">Html</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-sm px-3 py-0.5">CSS</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 text-sm px-3 py-0.5">JavaScript</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 text-sm px-3 py-0.5">SQL</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 text-sm px-3 py-0.5">InfluxDB</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300 text-sm px-3 py-0.5">Docker</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300 text-sm px-3 py-0.5">Postman</Badge>
+                            </li>
+                        </ol>
+                        
+                    </ol>
+                </div>
+
+                <div class="relative ml-5">
+                    <p class="absolute top-12 -left-0.5 p-5 bg-gradient-to-r from-purple-800 to-blue-950 rounded-full border-2 border-white-950">
+                        <img src="../../public/iconoMarcaPaginas.png" class="absolute left-2 top-2 w-6 h-6">
+                    </p>
+                    
+                    <ol class="list-none border-l px-10 ml-5 pt-9">
+                        <li class="mt-5 text-2xl mb-6"><strong>Atos, 21 de marzo de 2023 - 20 de junio de 2023</strong></li>
+                        <li class="ml-4 mb-1 opacity-95">Estuve de prácticas haciendo un bootcamp de Angular, Spring e Hibernate.</li>
+                        <ol id="badges" class="list-none ml-8 flex flex-row space-x-4">
+                            <li>
+                                <Badge bgColor="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300 text-sm px-3 py-0.5">Spring</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 text-sm px-3 py-0.5">Angular</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 text-sm px-3 py-0.5">Html</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-sm px-3 py-0.5">CSS</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 text-sm px-3 py-0.5">JavaScript</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300 text-sm px-3 py-0.5">Postman</Badge>
+                            </li>
                         </ol>
                     </ol>
                 </div>
-                
-                
+
+                <div class="relative mb-20 ml-5">
+                    <p class="absolute top-12 -left-0.5 p-5 bg-gradient-to-r from-purple-800 to-blue-950 rounded-full border-2 border-white-950">
+                        <img src="../../public/iconoMarcaPaginas.png" class="absolute left-2 top-2 w-6 h-6">
+                    </p>
+                    
+                    <ol class="list-none border-l px-10 ml-5 pt-9">
+                        <li class="mt-5 text-2xl mb-6"><strong>TCO Sistemas, 14 de marzo de 2021 - 18 de junio de 2021</strong></li>
+                        <li class="ml-4 mb-1 opacity-95">Estuve de prácticas instalando firmware a antenas y atención al cliente.</li>
+                    </ol>
+                </div>
             </div>
         </section>
     </main>

@@ -20,11 +20,51 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="fixed inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+		<div id="background" class="fixed inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
 		<Header />
 		<slot />
 	</body>
 </html>
+
+<script>
+    const header = document.querySelector('header');
+    const background = document.getElementById('background');
+    let animationActive = false;
+
+    function cambiarFondo() {
+        if (header && background) { 
+            const scrollHeight = document.documentElement.scrollHeight;
+            const windowHeight = window.innerHeight;
+            const scrollPosition = window.scrollY;
+            const scrollPercentage = (scrollPosition / (scrollHeight - windowHeight)) * 20;
+
+            if (scrollPercentage >= 10 && !animationActive) {
+                header.classList.remove('animate-header-fadeOut');
+                header.classList.add('animate-header-fadeIn');
+                animationActive = true; // Marcamos que la animación está activa para evitar que se active nuevamente
+                header.classList.add('rounded-full');
+                header.style.width = '40%';
+                header.style.color = "white";
+                header.style.backgroundColor = "black";
+                header.style.border = "1px solid white";
+                header.style.zIndex = "2";
+            } else if (scrollPercentage < 10 && animationActive) {
+                header.classList.remove('animate-header-fadeIn');
+                header.classList.add('animate-header-fadeOut');
+                animationActive = false; // Marcamos que la animación ha terminado para permitir que se active nuevamente
+                header.style.backgroundColor = 'transparent';
+                header.style.color = "white";
+                header.style.border = "0";
+                header.style.zIndex = "2";
+            }
+        }
+    }
+
+    window.addEventListener('scroll', cambiarFondo);
+</script>
+
+
+
 <style is:global>
 	:root {
 		color-scheme: light dark;
@@ -39,6 +79,45 @@ const { title } = Astro.props;
 		flex-direction: column;
 		align-items: center;
 	}
+
+	header {
+            transition: background-color 0.5s ease;
+        }
+
+		.animate-header-fadeIn {
+            animation: animateHeaderIn 0.8s ease;
+        }
+
+		.animate-header-fadeOut{
+            animation: animateHeaderOut 1s ease;
+        }
+
+        @keyframes animateHeaderIn {
+            0% {
+                width: 100%;
+                background-color: transparent;
+                border: none;
+            }
+            100% {
+                width: 40%;
+                background-color: black;
+                border: 1px solid white;
+            }
+        }
+
+		@keyframes animateHeaderOut {
+            0% {
+				width: 40%;
+                background-color: black;
+                border: 1px solid white;
+                
+            }
+            100% {
+                width: 100%;
+                background-color: transparent;
+                border: none;
+            }
+        }
 
 	#links a {
 		position: relative;
@@ -66,5 +145,28 @@ const { title } = Astro.props;
 
 	#links a:hover {
     transform: scale(1.1);
+	}
+
+	@keyframes show {
+		from {
+			opacity: 0;
+			scale: 25%;
+		}
+
+		to{
+			opacity: 1;
+			scale: 100%;
+		}
+	}
+
+	#experiencia, #badges{
+		view-timeline-name: --badge;
+		view-timeline-axis: block;
+
+		animation-timeline: --badge;
+		animation-name: show;
+
+		animation-range: entry 25% cover 30%;
+		animation-fill-mode: both;
 	}
 </style>
