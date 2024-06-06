@@ -36,12 +36,12 @@ const { title } = Astro.props;
             const scrollHeight = document.documentElement.scrollHeight;
             const windowHeight = window.innerHeight;
             const scrollPosition = window.scrollY;
-            const scrollPercentage = (scrollPosition / (scrollHeight - windowHeight)) * 20;
+            const scrollPercentage = (scrollPosition / (scrollHeight - windowHeight)) * 50;
 
             if (scrollPercentage >= 10 && !animationActive) {
                 header.classList.remove('animate-header-fadeOut');
                 header.classList.add('animate-header-fadeIn');
-                animationActive = true; // Marcamos que la animación está activa para evitar que se active nuevamente
+                animationActive = true;
                 header.classList.add('rounded-full');
                 header.style.width = '40%';
                 header.style.color = "white";
@@ -51,7 +51,7 @@ const { title } = Astro.props;
             } else if (scrollPercentage < 10 && animationActive) {
                 header.classList.remove('animate-header-fadeIn');
                 header.classList.add('animate-header-fadeOut');
-                animationActive = false; // Marcamos que la animación ha terminado para permitir que se active nuevamente
+                animationActive = false; 
                 header.style.backgroundColor = 'transparent';
                 header.style.color = "white";
                 header.style.border = "0";
@@ -144,7 +144,7 @@ const { title } = Astro.props;
 	}
 
 	#links a:hover {
-    transform: scale(1.1);
+    	transform: scale(1.1);
 	}
 
 	@keyframes show {
@@ -159,7 +159,7 @@ const { title } = Astro.props;
 		}
 	}
 
-	#experiencia, #badges{
+	#experiencia, #badges, #estudios{
 		view-timeline-name: --badge;
 		view-timeline-axis: block;
 

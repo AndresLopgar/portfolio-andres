@@ -5,9 +5,9 @@ import Badge from '../components/Badge.astro';
 
 <Layout title="Portafolio AJLG">
     <main>
-        <section class="flex px-10 py-40 flex-col">
+        <section id="home" class="flex px-10 pt-40 pb-20 flex-col">
             <div class="flex items-center space-x-4 mb-4">
-                <img class="rounded-full w-24 h-24 bg-gradient-to-r from-purple-800 to-blue-950 border-2" src="../../public/fotoAndres.webp" alt="foto andres">
+                <img class="rounded-full w-24 h-24 bg-gradient-to-r from-purple-800 to-blue-950 border-2" style="box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);" src="../../public/fotoAndres.webp" alt="foto andres">
                 <a href="https://www.linkedin.com/in/andrés-jesús-lópez-garcía-595a22208/" target="_blank">
                     <Badge bgColor="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300 text-sm px-3 py-0.5">Disponible para trabajar</Badge>
                 </a>
@@ -31,6 +31,7 @@ import Badge from '../components/Badge.astro';
                 </div>
             </div>
         </section>
+
         <section id="experiencia" class="flex px-10 py-5 flex-col">
             <div class="inline-block ">
                 <div class="flex items-center space-x-4 mb-4">
@@ -42,37 +43,37 @@ import Badge from '../components/Badge.astro';
                         <img src="../../public/iconoMarcaPaginas.png" class="absolute left-2 top-2 w-6 h-6">
                     </p>
                     
-                    <ol class="list-none border-l px-10 ml-5 pt-2">
+                    <ol class="list-none border-l px-10 ml-5 pt-0.5">
                         <li class="mt-5 text-2xl mb-6"><strong>Eviden, 28 de noviembre de 2023 - 7 de junio de 2024</strong></li>
                         <li class="ml-4 mb-1 opacity-95">Estuve de prácticas haciendo un bootcamp de Angular e Hibernate.</li>
                         <li class="ml-4 mb-3 opacity-95">He participado en un proyecto interno en el cual adquirí las siguientes capacidades:</li>
                         <ol id="badges" class="list-none ml-8 flex flex-row space-x-4">
                             <li>
-                                <Badge bgColor="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300 text-sm px-3 py-0.5">Spring</Badge>
+                                <Badge bgColor="cursor-default bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300 text-sm px-3 py-0.5">Spring</Badge>
                             </li>
                             <li>
-                                <Badge bgColor="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 text-sm px-3 py-0.5">Angular</Badge>
+                                <Badge bgColor="cursor-default bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 text-sm px-3 py-0.5">Angular</Badge>
                             </li>
                             <li>
-                                <Badge bgColor="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 text-sm px-3 py-0.5">Html</Badge>
+                                <Badge bgColor="cursor-default bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 text-sm px-3 py-0.5">Html</Badge>
                             </li>
                             <li>
-                                <Badge bgColor="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-sm px-3 py-0.5">CSS</Badge>
+                                <Badge bgColor="cursor-default bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-sm px-3 py-0.5">CSS</Badge>
                             </li>
                             <li>
-                                <Badge bgColor="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 text-sm px-3 py-0.5">JavaScript</Badge>
+                                <Badge bgColor="cursor-default bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 text-sm px-3 py-0.5">JavaScript</Badge>
                             </li>
                             <li>
-                                <Badge bgColor="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 text-sm px-3 py-0.5">SQL</Badge>
+                                <Badge bgColor="cursor-default bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 text-sm px-3 py-0.5">SQL</Badge>
                             </li>
                             <li>
-                                <Badge bgColor="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 text-sm px-3 py-0.5">InfluxDB</Badge>
+                                <Badge bgColor="cursor-default bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 text-sm px-3 py-0.5">InfluxDB</Badge>
                             </li>
                             <li>
-                                <Badge bgColor="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300 text-sm px-3 py-0.5">Docker</Badge>
+                                <Badge bgColor="cursor-default bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300 text-sm px-3 py-0.5">Docker</Badge>
                             </li>
                             <li>
-                                <Badge bgColor="bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300 text-sm px-3 py-0.5">Postman</Badge>
+                                <Badge bgColor="cursor-default bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300 text-sm px-3 py-0.5">Postman</Badge>
                             </li>
                         </ol>
                         
@@ -89,22 +90,22 @@ import Badge from '../components/Badge.astro';
                         <li class="ml-4 mb-1 opacity-95">Estuve de prácticas haciendo un bootcamp de Angular, Spring e Hibernate.</li>
                         <ol id="badges" class="list-none ml-8 flex flex-row space-x-4">
                             <li>
-                                <Badge bgColor="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300 text-sm px-3 py-0.5">Spring</Badge>
+                                <Badge bgColor="cursor-default bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300 text-sm px-3 py-0.5">Spring</Badge>
                             </li>
                             <li>
-                                <Badge bgColor="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 text-sm px-3 py-0.5">Angular</Badge>
+                                <Badge bgColor="cursor-default bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 text-sm px-3 py-0.5">Angular</Badge>
                             </li>
                             <li>
-                                <Badge bgColor="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 text-sm px-3 py-0.5">Html</Badge>
+                                <Badge bgColor="cursor-default bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 text-sm px-3 py-0.5">Html</Badge>
                             </li>
                             <li>
-                                <Badge bgColor="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-sm px-3 py-0.5">CSS</Badge>
+                                <Badge bgColor="cursor-default bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-sm px-3 py-0.5">CSS</Badge>
                             </li>
                             <li>
-                                <Badge bgColor="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 text-sm px-3 py-0.5">JavaScript</Badge>
+                                <Badge bgColor="cursor-default bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 text-sm px-3 py-0.5">JavaScript</Badge>
                             </li>
                             <li>
-                                <Badge bgColor="bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300 text-sm px-3 py-0.5">Postman</Badge>
+                                <Badge bgColor="cursor-default bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300 text-sm px-3 py-0.5">Postman</Badge>
                             </li>
                         </ol>
                     </ol>
@@ -122,5 +123,97 @@ import Badge from '../components/Badge.astro';
                 </div>
             </div>
         </section>
+        
+        <section id="estudios" class="flex px-10 py-5 flex-col">
+            <div class="inline-block">
+                <div class="flex items-center space-x-4 mb-4">
+                    <img src="../../public/iconoEstudios.png" class="w-20 h-20">
+                    <h1 class="text-5xl px-5">Estudios</h1>
+                </div>
+                <div class="relative ml-5">
+                    <p class="absolute top-3 p-5 bg-gradient-to-r from-purple-800 to-blue-950 rounded-full border-2 border-white-950">
+                        <img src="../../public/iconoMarcaPaginas.png" class="absolute left-2 top-2 w-6 h-6">
+                    </p>
+                    
+                    <ol class="list-none border-l px-10 ml-5 pt-0.5">
+                        <li class="mt-5 text-2xl mb-6"><strong>Grado Superior DAW - 2024</strong></li>
+                        <li class="ml-4 pb-1 opacity-95">Desarrollador de Aplicaciones Web en IES Sotero Hernández.</li>
+                    </ol>
+                </div>
+
+                <div class="relative ml-5">
+                    <p class="absolute top-4 -left-0.5 p-5 bg-gradient-to-r from-purple-800 to-blue-950 rounded-full border-2 border-white-950">
+                        <img src="../../public/iconoMarcaPaginas.png" class="absolute left-2 top-2 w-6 h-6">
+                    </p>
+                    
+                    <ol class="list-none border-l px-10 ml-5 pt-1">
+                        <li class="mt-5 text-2xl mb-6"><strong>Grado Medio SMR - 2022</strong></li>
+                        <li class="ml-4 pb-1 opacity-95">Técnico en Sistemas MicroInformáticos y Redes en IES Heliche.</li>
+                    </ol>
+                </div>
+
+                <div class="relative mb-20 ml-5">
+                    <p class="absolute top-4 -left-0.5 p-5 bg-gradient-to-r from-purple-800 to-blue-950 rounded-full border-2 border-white-950">
+                        <img src="../../public/iconoMarcaPaginas.png" class="absolute left-2 top-2 w-6 h-6">
+                    </p>
+                    
+                    <ol class="border-l px-10 ml-5 pt-1">
+                        <li class="mt-5 text-2xl pb-2 mb-6"><strong>CERTIFICADOS</strong></li>
+                        <ol id="badges" class="list-none ml-8 flex flex-row space-x-4">
+                            <li>
+                                <Badge bgColor="cursor-default bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300 text-sm px-3 py-0.5">Java</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="cursor-default bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 text-sm px-3 py-0.5">MySQL</Badge>
+                            </li>
+                            <li>
+                                <Badge bgColor="cursor-default bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 text-sm px-3 py-0.5">Python</Badge>
+                            </li>
+                        </ol>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="flex px-10 py-5 flex-col">
+            <div class="inline-block">
+                <div class="flex items-center space-x-4 mb-4">
+                    <img src="../../public/iconoUsuario.png" class="w-20 h-20">
+                    <h1 class="text-5xl px-5">Sobre mí</h1>
+                </div>
+            </div>
+        </section>
+
+        
     </main>
 </Layout>
+
+<script>
+    const links = document.querySelectorAll('nav a');
+
+    links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            
+            const href = link.getAttribute('href');
+            
+            if (href) {
+                const section = document.querySelector(href);
+                
+                if (section instanceof HTMLElement) {
+                    const sectionPosition = section.offsetTop;
+
+                    window.scrollTo({
+                        top: sectionPosition,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    console.error(`La sección no es un HTMLElement`);
+                }
+
+            } else {
+                console.error('El enlace no tiene el atributo href definido');
+            }
+        });
+    });
+</script>
